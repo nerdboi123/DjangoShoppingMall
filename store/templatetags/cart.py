@@ -1,8 +1,9 @@
 from django import template
 
-register = template.Library()
+register = template.Library() #템플릿 라이브러리 객체를 생성하여 register 변수에 할당
 
-@register.filter(name='is_in_cart')
+@register.filter(name='is_in_cart') #커스텀 필터를 등록하는 데코레이터(decorator)
+#product , cart 두 인자를 받아 해당 상품이 장바구니에 있는지 여부 확인 역할
 def is_in_cart(product  , cart):
     keys = cart.keys()
     for id in keys:
