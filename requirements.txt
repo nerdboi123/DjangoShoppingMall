@@ -15,5 +15,4 @@ wrapt==1.12.1
 
 
 
-pip 사용이 안될 때
-https://puleugo.tistory.com/18
+
