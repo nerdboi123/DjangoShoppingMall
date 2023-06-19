@@ -1,6 +1,6 @@
 from django.db import models
 
-class Category(models.Model):
+class Category(models.Model): #범위 모델링
     name = models.CharField(max_length=20)
 
     @staticmethod

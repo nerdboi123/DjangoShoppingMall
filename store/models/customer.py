@@ -1,7 +1,7 @@
 from django.db import  models
 from django.core.validators import MinLengthValidator
 
-class Customer(models.Model):
+class Customer(models.Model): #회원가입 모델링
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     phone = models.CharField(max_length=15)

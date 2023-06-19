@@ -4,7 +4,7 @@ from .customer import Customer
 import datetime
 
 
-class Order(models.Model):
+class Order(models.Model): #주문과정 모델링
     product = models.ForeignKey(Product,
                                 on_delete=models.CASCADE)
     customer = models.ForeignKey(Customer,
