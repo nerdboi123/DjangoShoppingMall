@@ -53,9 +53,10 @@
         <li class="nav-item ">
           <a class="nav-link" href="/cart">장바구니
             <span class="badge badge-info">{{request.session.cart.keys|length}}</span>
+            <!--현재 요청의 세션에 cart라는 키로 지저된 값(장바구니에 담긴 아이템)을 가져온다. 필터를 통해 아이템들의 키 개수를 반환한다.-->
             <span class="sr-only">(current)</span></a>
         </li>
-        {% if request.session.customer %}
+        {% if request.session.customer %} <!--customer라는 키가 있는지 확인-->
         
         <li class="nav-item ">
           <a class="nav-link" href="/orders">주문<span class="sr-only">(current)</span></a>
