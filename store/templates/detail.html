@@ -11,6 +11,12 @@
                     <p class="card-text">Price: {{ product.price }}</p>
                     <p class="card-text">{{ product.description }}</p>
                     <!-- 상품의 다른 정보들을 표시할 수 있음 -->
+                    <form action="/#{{product.id}}" method="POST" class="btn-block">
+							{% csrf_token %}
+							<input hidden type="text" name='product' value='{{product.id}}'>
+							<input type="submit" class="float-right btn btn-light  form-control"
+								value="Add To Cart">
+						</form>
                 </div>
             </div>
         </div>
