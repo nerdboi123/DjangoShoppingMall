@@ -1,30 +1,19 @@
+<!-- 디테일 페이지 템플릿(detail.html) -->
 {% extends 'base.html' %}
-<meta charset="utf-8">
 {% block content %}
-
-{% load cart %}
-{% load custom_filter %}
-<!-- body -->
 <div class="container-fluid mt-3">
-	<div class="row">
-
-		<!-- 상품 -->
-		<div id='products' class="col-lg-9 mx-auto">
-			<div class="row mx-auto">
-				<div class="card mx-auto mb-3" id={{product.id}} style="width: 18rem;">
-					<img class="card-img-top" src="{{product.image.url}}" alt="Card image cap">
-					<div class="card-body">
-						<a class="card" >{{product.name}}</a>
-						<p class="card-text"><b>{{product.price|currency}}</b></p>
-						<!-- {{product | is_in_cart:request.session.cart }} -->
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="row">
+        <div class="col-lg-3 mx-auto">
+            <div class="card">
+                <img class="card-img-top" src="{{ product.image.url }}" alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">Price: {{ product.price }}</p>
+                    <p class="card-text">{{ product.description }}</p>
+                    <!-- 상품의 다른 정보들을 표시할 수 있음 -->
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-
-
 {% endblock %}
